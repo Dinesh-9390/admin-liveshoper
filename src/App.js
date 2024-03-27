@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React from 'react'
+import Login from "./pages/Login.jsx"
+import Home from "./pages/Home.jsx"
+import Orders from "./pages/Orders.jsx"
+import Profile from "./pages/Profile.jsx"
+import Earnings from "./pages/Earnings.jsx"
+import "./css/body.css"
+import { Routes, Route } from 'react-router-dom'
+import NavBar from './components/NavBar.jsx'
+import ViewShopperOrder from './pages/ViewShopperOrder.jsx'
+import RejectedOrders from './pages/RejectedOrders.jsx'
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route  path="/" element={<Login/>}/>
+        <Route path="/home" element={<Home/>}/>
+        <Route path="/orders" element={<Orders/>}/>
+        <Route path="/earnings" element={<Earnings/>}/>
+        <Route path="/profile" element={<Profile/>}/>
+        <Route path="/rejectedOrders" element={<RejectedOrders/>}/>
+        <Route path="/viewShopperOrders" element={<ViewShopperOrder/>}/>
+    </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
