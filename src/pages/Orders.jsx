@@ -20,10 +20,7 @@ function Orders() {
         
         <div className='orders-container'>
         <div className='order-buttons-catg'>
-        <div className='user-welcome'>
-        <h3>Hello, karthik </h3>
-        <TimeComp/>
-        </div>
+       
           <div className='btn shoppers-btn' onClick={shopperfunction} style={{backgroundColor: optionSelected? "black" : "gray"}}><pre>Shoppers</pre></div>
           <div className='btn products-btn' onClick={ordersfunction} style={{backgroundColor: optionSelected? "gray" : "black"}}><pre>Products</pre></div>
 

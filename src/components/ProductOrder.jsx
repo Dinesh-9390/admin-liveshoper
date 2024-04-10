@@ -44,7 +44,7 @@ function ProductOrder() {
 
               <Link className="view-link-shopper" to="/viewShopperOrders">
 
-                <div className='order-data' style={{display: "flex", color: "black",}}>
+                <div className='product-order-data' style={{display: "flex", color: "black",}}>
                   <div className='left'>
                     <img className='user-image' src={img} alt='image' />
                     <div className='user-details'>

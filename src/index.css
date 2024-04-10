@@ -5,3 +5,12 @@
     padding: 0px;
     font-family: Roboto;
 }
+
+button:focus,
+button:active,
+button::-moz-focus-inner,
+a:focus,
+a:active,
+a::-moz-focus-inner {
+  outline: none;
+}

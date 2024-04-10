@@ -18,7 +18,8 @@ function TimeComp() {
       const ampm = hours >= 12 ? 'pm' : 'am';
       const formatedHours = hours % 12 || 12;
       const formatedMinutes = minutes < 10 ? `0${minutes}` : minutes;
-      setTime(`${formatedHours}:${formatedMinutes}:${seconds}${ampm}`)
+      const formatedSeconds = seconds < 10 ? `0${seconds}` : seconds;
+      setTime(`${formatedHours}:${formatedMinutes}:${formatedSeconds}${ampm}`)
       setHrs(hours)
     }, 1000)
 

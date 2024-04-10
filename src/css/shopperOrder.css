@@ -1,5 +1,5 @@
 .shopper-orders-content{
-    margin-top: -30px;
+    margin-top: -10px;
 }
 
 
@@ -7,7 +7,6 @@
     margin-left: 25px;
     margin-top: 20px;
     border-radius: 20px;
-    background-color: rgb(249, 249, 249);
     display: flex;
     justify-content: space-evenly;
     width: 90%;
@@ -17,17 +16,20 @@
     padding: 20px; /* Add padding for content */
 }
 
-.user-image{
+.shopper-orders-content .user-image{
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-right: 30px;
+    margin-top: 5px;
     justify-content: center;
     align-self: center;
+
 }
 
 .left, .right{
     display: flex;
+    padding-left: 50px;
 }
 
 .shopper-details pre, .user-details pre{
@@ -51,8 +53,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: green;
-    border-radius: 10px;
+    background-color: rgb(5, 148, 5);
     width: 80px;
     height: 40px;
     color: white;
@@ -64,8 +65,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
-    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
     width: 80px;
     height: 40px;
     color: white;
@@ -117,20 +117,36 @@
   }
 
   .order-data{
-    margin-left: -50px;
+    margin-left: -80px;
     width: 120%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     font-weight: 500;
   }
+ 
+  .order-data .right{
+    margin-left: -40px;
+  }
 
-  .orders-count{
+  .shoppers-labels{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 50px;
+    margin-bottom: 0px;
+  }
+  
+  .shoppers-labels pre{
     margin-left: 30px;
     font-size: 1rem;
     font-weight: 500;
     margin-top: 20px;
   }
 
+  .shopper-label
+{
+  position: relative;
+  left: 30px;
+}
 
 
 
