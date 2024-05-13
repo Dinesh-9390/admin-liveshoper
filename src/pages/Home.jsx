@@ -4,7 +4,7 @@ import TimeComp from '../components/TimeComp';
 import "../css/home.css"
 import SearchBar from '../components/SearchBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowDownUpAcrossLine, faArrowsAlt, faArrowsAltV, faClipboard, faExpandAlt, faPaperclip } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDownUpAcrossLine, faArrowsAlt, faArrowsAltV, faBars, faClipboard, faExpandAlt, faPaperclip } from '@fortawesome/free-solid-svg-icons';
 import { faClose } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 import { ToastContainer, toast } from 'react-toastify';
@@ -141,8 +141,16 @@ function Home() {
     return (
         <>
             {
-                showAllFiles !== true ? (<div className="home" style={{ display: "flex" }}>
-                    <NavBar />
+                showAllFiles !== true ? (
+                <div className="home">
+                    
+                    <div className="nav-bar">
+                    <NavBar/>
+                    </div>
+                    <div className='nav-bar-mobile'>
+                        <div className='logo-mobile'>LiveShoper</div>
+                        <div className='menu-mobile'><FontAwesomeIcon icon={faBars}/></div>
+                    </div>
                             {/* Additional form fields or submit button can be added here */}
                            
                     {
@@ -178,7 +186,7 @@ function Home() {
                                }
                             </div>)
                         }
-                        <div className='home-nav' style={{ display: "flex" }}>
+                        <div className='home-nav'>
 
                             <SearchBar />
                         </div>

@@ -14,10 +14,10 @@ import AddProduct from './pages/AddProduct.jsx'
 function App() {
   return (
     <div>
-      <div className='user-welcome' >
+      {/* <div className='user-welcome' >
         <h3 style={{ marginLeft: "20px", fontWeight: "500", marginTop: "20px" }}>Hello, karthik </h3>
         <div style={{ marginLeft: "20px" }}><TimeComp /> </div>
-      </div>
+      </div> */}
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />

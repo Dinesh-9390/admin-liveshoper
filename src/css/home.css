@@ -478,3 +478,89 @@ ul {
     padding: 10px;
 
 }
+
+.nav-bar-mobile{
+    display: none;
+}
+
+.home{
+    display: flex;
+}
+@media screen and (max-width: 768px){
+
+.home{
+    display: block;
+}
+.menu{
+    display: none;
+}
+.nav-bar{
+    display: none;
+} 
+
+.nav-bar-mobile{
+    background-color: black;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    color: white;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-bar-mobile .logo-mobile{
+  font-size: x-large;
+  font-weight: 900;
+}
+.home-right-content{
+    margin: 0px;
+    padding: 0px;
+}
+.home-right-content .home-nav {
+   display: block;
+   justify-content: center;
+   align-items: center;
+   margin-left: -20px;
+}
+.message-field-promotions{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+    width: 80%;
+}
+.push-txt{
+    font-weight: 600;
+    font-size: x-large;
+}
+.push-message-box{
+    width: 105%;
+
+}
+
+.send-option{
+    margin-left: -220px;
+}
+
+.send-btn{
+    display: none;
+}
+
+.currency-exchange{
+    display: none;
+}
+
+.push-selection-option{
+    display: block;
+    background-color: red;
+}
+
+.pin {
+    cursor: pointer;
+    position: relative;
+    top: 100px;
+    left: 0px;
+
+
+}
+}
