@@ -11,6 +11,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import SearchBarToAddPersons from '../components/SearchBarToAddPersons';
 import {  useDispatch, useSelector } from 'react-redux';
 import { removeAllUsers } from '../redux/push-notification/selectedUserNotificationSlice';
+import Products from './Products';
 
 
 

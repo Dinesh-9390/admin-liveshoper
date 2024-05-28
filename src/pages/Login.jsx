@@ -1,11 +1,13 @@
 import React, {useState} from 'react'
 import "../css/login.css"
 import { useNavigate } from 'react-router-dom'
+import axios from 'axios'
 
 function Login() {
 
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [errorMessage, setErrorMessage] = useState('');
   const navigate = useNavigate()
   const onChnageUsername = (e) => { 
     setUsername(e.target.value)
@@ -16,12 +18,26 @@ function Login() {
   }
 
 
-  const formSubmit = (e) => {
+  const formSubmit = async(e) => {
     e.preventDefault();
-    console.log(username, password);
-    console.log("Form submitted");
-    navigate("/home")
+    try {
+      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/user/login?user=${username}&password=${password}`)
+
+      if (response.data.statusCode === 200) {
+        navigate("/home");
+      }
+      else{
+        setErrorMessage("User Credentials Not found");
+      }
+    } catch (error) {
+      if (error.response && error.response.status === 401) {
+        setErrorMessage('Username or password is incorrect. Please try again.');
+      } else {
+        console.error('Error:', error);
+        setErrorMessage('User Credentials Not found!');
+      }
   }
+}
   return (
     <div className='login-page'>
 
@@ -34,6 +50,7 @@ function Login() {
                 <h4>Password</h4>
 
                 <input id="password" onChange={onChnagePassword} type='password' placeholder='password'></input>
+                {errorMessage && <p className="error-message" style={{color:'white',fontSize:'0.8rem',textAlign:'center'}}>{errorMessage}</p>}
                 <button type='submit'><h3>login</h3></button>
             </form>
            </div>

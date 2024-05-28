@@ -13,7 +13,7 @@ function NavBar() {
           <Link to="/home" className={`link ${location.pathname === '/home' ? 'selected' : ''}`}><li><pre>Home</pre></li></Link>
           <Link to="/orders" className={`link ${location.pathname === '/orders' ? 'selected' : ''}`}><li><pre>Orders</pre></li></Link>
           <Link to="/rejectedOrders" className={`link ${location.pathname === '/rejectedOrders' ? 'selected' : ''}`}><li><pre>Rejected Orders</pre></li></Link>
-          <Link to="/addProduct" className={`link ${location.pathname === '/addProduct' ? 'selected' : ''}`}><li><pre>Add Product</pre></li></Link>
+          <Link to="/Products" className={`link ${location.pathname === '/Products' ? 'selected' : ''}`}><li><pre>Products</pre></li></Link>
           <Link to="/earnings" className={`link ${location.pathname === '/earnings' ? 'selected' : ''}`}><li><pre>Earnings</pre></li></Link>
           <Link to="/profile" className={`link ${location.pathname === '/profile' ? 'selected' : ''}`}><li><pre>Profile</pre></li></Link>
         </ul>

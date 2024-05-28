@@ -11,6 +11,8 @@ import RejectedOrders from './pages/RejectedOrders.jsx'
 import EarningsPage from './pages/EarningsPage.jsx'
 import TimeComp from './components/TimeComp.jsx'
 import AddProduct from './pages/AddProduct.jsx'
+import Products from './pages/Products.jsx'
+
 function App() {
   return (
     <div>
@@ -27,6 +29,7 @@ function App() {
         <Route path="/addProduct" element={<AddProduct/>}/>
         <Route path="/earnings" element={<EarningsPage />} />
         <Route path="/viewShopperOrders" element={<ViewShopperOrder />} />
+        <Route path="/Products" element={<Products />} />
       </Routes>
     </div>
   )

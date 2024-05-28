@@ -34,10 +34,10 @@ function ShopperOrder() {
     });
   }
 
-  const notify = () => toast.success("Shopper Order Successful");
-  const notifyWhenReject = () => {
-    toast.error("Shopper Order Rejected")
-  }
+    const notify = () => toast.success("Shopper Order Successful");
+    const notifyWhenReject = () => {
+      toast.error("Shopper Order Rejected")
+    }
   return (
     <div className='shopper-orders-content'>
       <div className='shoppers-labels'>
